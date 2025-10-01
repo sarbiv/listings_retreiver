@@ -1,0 +1,1033 @@
+2025-09-17 14:13:44 [scrapy.utils.log] INFO: Scrapy 2.13.3 started (bot: luxury_scraper)
+2025-09-17 14:13:44 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.1',
+ 'libxml2': '2.14.5',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.13 (main, Jun  5 2025, 08:21:08) [Clang 14.0.6 ]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.3 16 Sep 2025)',
+ 'cryptography': '46.0.1',
+ 'Platform': 'macOS-13.3.1-arm64-arm-64bit'}
+2025-09-17 14:13:44 [scrapy.addons] INFO: Enabled addons:
+[]
+2025-09-17 14:13:44 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-09-17 14:13:44 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'AUTOTHROTTLE_MAX_DELAY': 10,
+ 'AUTOTHROTTLE_START_DELAY': 1,
+ 'AUTOTHROTTLE_TARGET_CONCURRENCY': 0.5,
+ 'BOT_NAME': 'luxury_scraper',
+ 'CLOSESPIDER_PAGECOUNT': 3,
+ 'CONCURRENT_REQUESTS': 1,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 2,
+ 'LOG_FILE': PosixPath('/Users/segevarbiv/Projects/markondo data listings/data/scraper.log'),
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'RANDOMIZE_DOWNLOAD_DELAY': 0.5,
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TELNETCONSOLE_ENABLED': False,
+ 'USER_AGENT': 'LuxuryScraper/1.0 (+https://example.com/bot)'}
+2025-09-17 14:13:45 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scraper.middlewares.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-09-17 14:13:45 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-09-17 14:13:45 [scrapy.middleware] INFO: Enabled item pipelines:
+['scraper.pipelines.clean_normalize.CleanNormalizePipeline',
+ 'scraper.pipelines.dedupe.DedupePipeline',
+ 'scraper.pipelines.database.DatabasePipeline']
+2025-09-17 14:13:45 [scrapy.core.engine] INFO: Spider opened
+2025-09-17 14:13:45 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-09-17 14:13:51 [scrapy.core.scraper] WARNING: Dropped: Deduplication failed: 'NoneType' object has no attribute 'strip'
+{'project': {'name': 'ELEVATE YOUR EXPECTATIONS', 'developer_name': None, 'description': 'Selene Fort Lauderdale is a new luxury condominium located on Fort Lauderdale beachfront, featuring an unrivaled South Florida lifestyle.', 'address': None, 'city': 'Fort Lauderdale', 'country': 'United States', 'status': None, 'est_completion': None, 'website_url': 'https://www.google.com/maps/dir//selene+fort+lauderdale/@26.2238261,-80.1453491,12.5z/data=!4m8!4m7!1m0!1m5!1m1!1s0x88d901327bd03601:0xc9b99b6f8402c719!2m2!1d-80.1049044!2d26.1230197', 'property_type': 'Residential', 'email': 'info@seleneftl.com', 'phone': '2024-11-01', 'inquiry_url': '<a href="https://selenefortlauderdale.com/contact/" class="elementor-item">Contact</a>'}, 'units': [{'unit_name': 'Various', 'price_note': 'Price on request'}], 'amenities': ['Garden', 'Security', 'Library', 'Building', 'Spa', 'Ocean View', 'Residences', 'Penthouse Two', 'Restaurant', 'Get Directions »', 'Sand Castle', 'Beachwalk – Sold Out', 'Amenities', 'Gallery', 'Info@Seleneftl.Com', 'Team', 'Location', 'Pool', 'Seabreeze', 'Deep Sky – Sold Out'], 'media_links': [{'type': 'vr', 'url': 'https://<a href="https://selenefortlauderdale.com/virtual-tour/" class="elementor-sub-item">Virtual Tour</a>', 'caption': 'Virtual Tour (virtual)'}, {'type': 'vr', 'url': 'https://<a href="https://selenefortlauderdale.com/virtual-tour/" class="elementor-sub-item" tabindex="-1">Virtual Tour</a>', 'caption': 'Virtual Tour (virtual)'}, {'type': 'vr', 'url': 'https://<a href="https://selenefortlauderdale.com/virtual-tour/" class="elementor-sub-item">Virtual Tour</a>', 'caption': 'Virtual Tour (tour)'}, {'type': 'vr', 'url': 'https://<a href="https://selenefortlauderdale.com/virtual-tour/" class="elementor-sub-item" tabindex="-1">Virtual Tour</a>', 'caption': 'Virtual Tour (tour)'}, {'type': 'vr', 'url': 'https://#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjE1NTkiLCJ0b2dnbGUiOmZhbHNlfQ%3D%3D', 'caption': 'Virtual Tour (3d)'}, {'type': 'vr', 'url': 'https://#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjE1NTMiLCJ0b2dnbGUiOmZhbHNlfQ%3D%3D', 'caption': 'Virtual Tour (3d)'}, {'type': 'vr', 'url': 'https://#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjE1NTAiLCJ0b2dnbGUiOmZhbHNlfQ%3D%3D', 'caption': 'Virtual Tour (3d)'}, {'type': 'vr', 'url': 'https://#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjE1NTkiLCJ0b2dnbGUiOmZhbHNlfQ%3D%3D', 'caption': 'Virtual Tour (3d)'}, {'type': 'vr', 'url': 'https://#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9', 'caption': 'Virtual Tour (3d)'}, {'type': 'vr', 'url': 'https://#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9', 'caption': 'Virtual Tour (3d)'}, {'type': 'vr', 'url': 'https://#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9', 'caption': 'Virtual Tour (3d)'}, {'type': 'vr', 'url': 'https://<a href="https://selenefortlauderdale.com/360-views/" title="Explore the 360 views" class="btn-golden" role="button">Explore the 360º Views</a>', 'caption': 'Virtual Tour (360)'}, {'type': 'vr', 'url': 'https://selenefortlauderdale.com/360-views/', 'caption': 'Virtual Tour (360)'}, {'type': 'vr', 'url': 'https://<a style="color: #1f2236;" href="https://www.google.com/maps/dir//selene+fort+lauderdale/@26.2238261,-80.1453491,12.5z/data=!4m8!4m7!1m0!1m5!1m1!1s0x88d901327bd03601:0xc9b99b6f8402c719!2m2!1d-80.1049044!2d26.1230197" target="_blank" rel="noopener">2591 E. Sunrise Blvd., Fort Lauderdale, FL 33304</a>', 'caption': 'Virtual Tour (360)'}, {'type': 'vr', 'url': 'https://www.google.com/maps/dir//selene+fort+lauderdale/@26.2238261,-80.1453491,12.5z/data=!4m8!4m7!1m0!1m5!1m1!1s0x88d901327bd03601:0xc9b99b6f8402c719!2m2!1d-80.1049044!2d26.1230197', 'caption': 'Virtual Tour (360)'}, {'type': 'vr', 'url': 'https://<a href="https://selenefortlauderdale.com/virtual-tour/" class="elementor-sub-item">Virtual Tour</a>', 'caption': 'Virtual Tour'}, {'type': 'vr', 'url': 'https://<a href="https://selenefortlauderdale.com/virtual-tour/" class="elementor-sub-item" tabindex="-1">Virtual Tour</a>', 'caption': 'Virtual Tour'}, {'type': 'image', 'url': 'https://selenefortlauderdale.com/wp-content/themes/hello-elementor-child/home-carousel/glider-image-1.jpg', 'caption': 'Project Image'}, {'type': 'image', 'url': 'https://selenefortlauderdale.com/wp-content/themes/hello-elementor-child/home-carousel/glider-image-2.jpg', 'caption': 'Project Image'}, {'type': 'image', 'url': 'https://selenefortlauderdale.com/wp-content/themes/hello-elementor-child/home-carousel/glider-image-3.jpg', 'caption': 'Project Image'}, {'type': 'image', 'url': 'https://selenefortlauderdale.com/wp-content/themes/hello-elementor-child/home-carousel/glider-image-11-min.jpg', 'caption': 'Project Image'}, {'type': 'image', 'url': 'https://selenefortlauderdale.com/wp-content/themes/hello-elementor-child/home-carousel/glider-image-5.jpg', 'caption': 'Project Image'}, {'type': 'image', 'url': 'https://selenefortlauderdale.com/wp-content/themes/hello-elementor-child/home-carousel/glider-image-6.jpg', 'caption': 'Project Image'}, {'type': 'image', 'url': 'https://selenefortlauderdale.com/wp-content/themes/hello-elementor-child/home-carousel/glider-image-7.jpg', 'caption': 'Project Image'}, {'type': 'image', 'url': 'https://selenefortlauderdale.com/wp-content/themes/hello-elementor-child/home-carousel/glider-image-8.jpg', 'caption': 'Project Image'}, {'type': 'image', 'url': 'https://selenefortlauderdale.com/wp-content/themes/hello-elementor-child/home-carousel/glider-image-13.jpg', 'caption': 'Project Image'}, {'type': 'image', 'url': 'https://selenefortlauderdale.com/wp-content/themes/hello-elementor-child/home-carousel/glider-image-9.jpg', 'caption': 'Project Image'}], 'source': {'source_name': 'selene_fort_lauderdale', 'source_url': 'https://selenefortlauderdale.com/', 'robots_ok': True, 'tos_ok': True}}
+2025-09-17 14:13:51 [scrapy.core.engine] INFO: Closing spider (finished)
+2025-09-17 14:13:51 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 626,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 75732,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 2,
+ 'elapsed_time_seconds': 5.583361,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2025, 9, 17, 18, 13, 51, 456245, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 273641,
+ 'httpcompression/response_count': 2,
+ 'item_dropped_count': 1,
+ 'item_dropped_reasons_count/DropItem': 1,
+ 'items_per_minute': 0.0,
+ 'log_count/INFO': 8,
+ 'log_count/WARNING': 1,
+ 'memusage/max': 145915904,
+ 'memusage/startup': 145915904,
+ 'response_received_count': 2,
+ 'responses_per_minute': 24.0,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2025, 9, 17, 18, 13, 45, 872884, tzinfo=datetime.timezone.utc)}
+2025-09-17 14:13:51 [scrapy.core.engine] INFO: Spider closed (finished)
+2025-09-17 14:14:16 [scrapy.utils.log] INFO: Scrapy 2.13.3 started (bot: luxury_scraper)
+2025-09-17 14:14:16 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.1',
+ 'libxml2': '2.14.5',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.13 (main, Jun  5 2025, 08:21:08) [Clang 14.0.6 ]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.3 16 Sep 2025)',
+ 'cryptography': '46.0.1',
+ 'Platform': 'macOS-13.3.1-arm64-arm-64bit'}
+2025-09-17 14:14:16 [scrapy.addons] INFO: Enabled addons:
+[]
+2025-09-17 14:14:16 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-09-17 14:14:16 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'AUTOTHROTTLE_MAX_DELAY': 10,
+ 'AUTOTHROTTLE_START_DELAY': 1,
+ 'AUTOTHROTTLE_TARGET_CONCURRENCY': 0.5,
+ 'BOT_NAME': 'luxury_scraper',
+ 'CLOSESPIDER_PAGECOUNT': 2,
+ 'CONCURRENT_REQUESTS': 1,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 2,
+ 'LOG_FILE': PosixPath('/Users/segevarbiv/Projects/markondo data listings/data/scraper.log'),
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'RANDOMIZE_DOWNLOAD_DELAY': 0.5,
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TELNETCONSOLE_ENABLED': False,
+ 'USER_AGENT': 'LuxuryScraper/1.0 (+https://example.com/bot)'}
+2025-09-17 14:14:16 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scraper.middlewares.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-09-17 14:14:16 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-09-17 14:14:16 [scrapy.middleware] INFO: Enabled item pipelines:
+['scraper.pipelines.clean_normalize.CleanNormalizePipeline',
+ 'scraper.pipelines.dedupe.DedupePipeline',
+ 'scraper.pipelines.database.DatabasePipeline']
+2025-09-17 14:14:16 [scrapy.core.engine] INFO: Spider opened
+2025-09-17 14:14:16 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-09-17 14:14:18 [scrapy.core.engine] INFO: Closing spider (closespider_pagecount)
+2025-09-17 14:14:19 [scrapy.core.scraper] WARNING: Dropped: Database storage failed: 'email' is an invalid keyword argument for Project
+{'project': {'name': 'ELEVATE YOUR EXPECTATIONS', 'developer_name': None, 'description': 'Selene Fort Lauderdale is a new luxury condominium located on Fort Lauderdale beachfront, featuring an unrivaled South Florida lifestyle.', 'address': None, 'city': 'Fort Lauderdale', 'country': 'United States', 'status': None, 'est_completion': None, 'website_url': 'https://www.google.com/maps/dir//selene+fort+lauderdale/@26.2238261,-80.1453491,12.5z/data=!4m8!4m7!1m0!1m5!1m1!1s0x88d901327bd03601:0xc9b99b6f8402c719!2m2!1d-80.1049044!2d26.1230197', 'property_type': 'Residential', 'email': 'info@seleneftl.com', 'phone': '2024-11-01', 'inquiry_url': '<a href="https://selenefortlauderdale.com/contact/" class="elementor-item">Contact</a>', 'completeness_score': 0.6}, 'units': [{'unit_name': 'Various', 'price_note': 'Price on request'}], 'amenities': ['Security', 'Amenities', 'Beachwalk – Sold Out', 'Seaglass', 'Garden', 'Brandeis – Sold Out', 'Tiffany', 'Penthouse One', 'Balcony', 'Team', 'Azure', 'Broker Portal', 'Cobalt – Sold Out', 'Info@Seleneftl.Com', 'Virtual Tour', 'Pool', 'Residences', 'Get Directions »', 'Spa', 'Building'], 'media_links': [{'type': 'vr', 'url': 'https://<a href="https://selenefortlauderdale.com/virtual-tour/" class="elementor-sub-item">Virtual Tour</a>', 'caption': 'Virtual Tour (virtual)'}, {'type': 'vr', 'url': 'https://<a href="https://selenefortlauderdale.com/virtual-tour/" class="elementor-sub-item" tabindex="-1">Virtual Tour</a>', 'caption': 'Virtual Tour (virtual)'}, {'type': 'vr', 'url': 'https://<a href="https://selenefortlauderdale.com/virtual-tour/" class="elementor-sub-item">Virtual Tour</a>', 'caption': 'Virtual Tour (tour)'}, {'type': 'vr', 'url': 'https://<a href="https://selenefortlauderdale.com/virtual-tour/" class="elementor-sub-item" tabindex="-1">Virtual Tour</a>', 'caption': 'Virtual Tour (tour)'}, {'type': 'vr', 'url': 'https://#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjE1NTkiLCJ0b2dnbGUiOmZhbHNlfQ%3D%3D', 'caption': 'Virtual Tour (3d)'}, {'type': 'vr', 'url': 'https://#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjE1NTMiLCJ0b2dnbGUiOmZhbHNlfQ%3D%3D', 'caption': 'Virtual Tour (3d)'}, {'type': 'vr', 'url': 'https://#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjE1NTAiLCJ0b2dnbGUiOmZhbHNlfQ%3D%3D', 'caption': 'Virtual Tour (3d)'}, {'type': 'vr', 'url': 'https://#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjE1NTkiLCJ0b2dnbGUiOmZhbHNlfQ%3D%3D', 'caption': 'Virtual Tour (3d)'}, {'type': 'vr', 'url': 'https://#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9', 'caption': 'Virtual Tour (3d)'}, {'type': 'vr', 'url': 'https://#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9', 'caption': 'Virtual Tour (3d)'}, {'type': 'vr', 'url': 'https://#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9', 'caption': 'Virtual Tour (3d)'}, {'type': 'vr', 'url': 'https://<a href="https://selenefortlauderdale.com/360-views/" title="Explore the 360 views" class="btn-golden" role="button">Explore the 360º Views</a>', 'caption': 'Virtual Tour (360)'}, {'type': 'vr', 'url': 'https://selenefortlauderdale.com/360-views/', 'caption': 'Virtual Tour (360)'}, {'type': 'vr', 'url': 'https://<a style="color: #1f2236;" href="https://www.google.com/maps/dir//selene+fort+lauderdale/@26.2238261,-80.1453491,12.5z/data=!4m8!4m7!1m0!1m5!1m1!1s0x88d901327bd03601:0xc9b99b6f8402c719!2m2!1d-80.1049044!2d26.1230197" target="_blank" rel="noopener">2591 E. Sunrise Blvd., Fort Lauderdale, FL 33304</a>', 'caption': 'Virtual Tour (360)'}, {'type': 'vr', 'url': 'https://www.google.com/maps/dir//selene+fort+lauderdale/@26.2238261,-80.1453491,12.5z/data=!4m8!4m7!1m0!1m5!1m1!1s0x88d901327bd03601:0xc9b99b6f8402c719!2m2!1d-80.1049044!2d26.1230197', 'caption': 'Virtual Tour (360)'}, {'type': 'vr', 'url': 'https://<a href="https://selenefortlauderdale.com/virtual-tour/" class="elementor-sub-item">Virtual Tour</a>', 'caption': 'Virtual Tour'}, {'type': 'vr', 'url': 'https://<a href="https://selenefortlauderdale.com/virtual-tour/" class="elementor-sub-item" tabindex="-1">Virtual Tour</a>', 'caption': 'Virtual Tour'}, {'type': 'image', 'url': 'https://selenefortlauderdale.com/wp-content/themes/hello-elementor-child/home-carousel/glider-image-1.jpg', 'caption': 'Project Image'}, {'type': 'image', 'url': 'https://selenefortlauderdale.com/wp-content/themes/hello-elementor-child/home-carousel/glider-image-2.jpg', 'caption': 'Project Image'}, {'type': 'image', 'url': 'https://selenefortlauderdale.com/wp-content/themes/hello-elementor-child/home-carousel/glider-image-3.jpg', 'caption': 'Project Image'}, {'type': 'image', 'url': 'https://selenefortlauderdale.com/wp-content/themes/hello-elementor-child/home-carousel/glider-image-11-min.jpg', 'caption': 'Project Image'}, {'type': 'image', 'url': 'https://selenefortlauderdale.com/wp-content/themes/hello-elementor-child/home-carousel/glider-image-5.jpg', 'caption': 'Project Image'}, {'type': 'image', 'url': 'https://selenefortlauderdale.com/wp-content/themes/hello-elementor-child/home-carousel/glider-image-6.jpg', 'caption': 'Project Image'}, {'type': 'image', 'url': 'https://selenefortlauderdale.com/wp-content/themes/hello-elementor-child/home-carousel/glider-image-7.jpg', 'caption': 'Project Image'}, {'type': 'image', 'url': 'https://selenefortlauderdale.com/wp-content/themes/hello-elementor-child/home-carousel/glider-image-8.jpg', 'caption': 'Project Image'}, {'type': 'image', 'url': 'https://selenefortlauderdale.com/wp-content/themes/hello-elementor-child/home-carousel/glider-image-13.jpg', 'caption': 'Project Image'}, {'type': 'image', 'url': 'https://selenefortlauderdale.com/wp-content/themes/hello-elementor-child/home-carousel/glider-image-9.jpg', 'caption': 'Project Image'}], 'source': {'source_name': 'selene_fort_lauderdale', 'source_url': 'https://selenefortlauderdale.com/', 'robots_ok': True, 'tos_ok': True}, '_is_update': False}
+2025-09-17 14:14:19 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 614,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 75730,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 2,
+ 'elapsed_time_seconds': 2.350713,
+ 'finish_reason': 'closespider_pagecount',
+ 'finish_time': datetime.datetime(2025, 9, 17, 18, 14, 19, 277361, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 273641,
+ 'httpcompression/response_count': 2,
+ 'item_dropped_count': 1,
+ 'item_dropped_reasons_count/DropItem': 1,
+ 'items_per_minute': 0.0,
+ 'log_count/INFO': 8,
+ 'log_count/WARNING': 1,
+ 'memusage/max': 144982016,
+ 'memusage/startup': 144982016,
+ 'response_received_count': 2,
+ 'responses_per_minute': 60.0,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2025, 9, 17, 18, 14, 16, 926648, tzinfo=datetime.timezone.utc)}
+2025-09-17 14:14:19 [scrapy.core.engine] INFO: Spider closed (closespider_pagecount)
+2025-09-17 14:14:41 [scrapy.utils.log] INFO: Scrapy 2.13.3 started (bot: luxury_scraper)
+2025-09-17 14:14:41 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.1',
+ 'libxml2': '2.14.5',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.13 (main, Jun  5 2025, 08:21:08) [Clang 14.0.6 ]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.3 16 Sep 2025)',
+ 'cryptography': '46.0.1',
+ 'Platform': 'macOS-13.3.1-arm64-arm-64bit'}
+2025-09-17 14:14:41 [scrapy.addons] INFO: Enabled addons:
+[]
+2025-09-17 14:14:41 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-09-17 14:14:41 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'AUTOTHROTTLE_MAX_DELAY': 10,
+ 'AUTOTHROTTLE_START_DELAY': 1,
+ 'AUTOTHROTTLE_TARGET_CONCURRENCY': 0.5,
+ 'BOT_NAME': 'luxury_scraper',
+ 'CLOSESPIDER_PAGECOUNT': 1,
+ 'CONCURRENT_REQUESTS': 1,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 2,
+ 'LOG_FILE': PosixPath('/Users/segevarbiv/Projects/markondo data listings/data/scraper.log'),
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'RANDOMIZE_DOWNLOAD_DELAY': 0.5,
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TELNETCONSOLE_ENABLED': False,
+ 'USER_AGENT': 'LuxuryScraper/1.0 (+https://example.com/bot)'}
+2025-09-17 14:14:41 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scraper.middlewares.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-09-17 14:14:41 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-09-17 14:14:42 [scrapy.middleware] INFO: Enabled item pipelines:
+['scraper.pipelines.clean_normalize.CleanNormalizePipeline',
+ 'scraper.pipelines.dedupe.DedupePipeline',
+ 'scraper.pipelines.database.DatabasePipeline']
+2025-09-17 14:14:42 [scrapy.core.engine] INFO: Spider opened
+2025-09-17 14:14:42 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-09-17 14:14:42 [scrapy.core.engine] INFO: Closing spider (closespider_pagecount)
+2025-09-17 14:14:44 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 583,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 75730,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 2,
+ 'elapsed_time_seconds': 2.384681,
+ 'finish_reason': 'closespider_pagecount',
+ 'finish_time': datetime.datetime(2025, 9, 17, 18, 14, 44, 725253, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 273641,
+ 'httpcompression/response_count': 2,
+ 'item_scraped_count': 1,
+ 'items_per_minute': 30.0,
+ 'log_count/INFO': 8,
+ 'memusage/max': 144277504,
+ 'memusage/startup': 144277504,
+ 'response_received_count': 2,
+ 'responses_per_minute': 60.0,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2025, 9, 17, 18, 14, 42, 340572, tzinfo=datetime.timezone.utc)}
+2025-09-17 14:14:44 [scrapy.core.engine] INFO: Spider closed (closespider_pagecount)
+2025-09-17 14:15:03 [scrapy.utils.log] INFO: Scrapy 2.13.3 started (bot: luxury_scraper)
+2025-09-17 14:15:03 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.1',
+ 'libxml2': '2.14.5',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.13 (main, Jun  5 2025, 08:21:08) [Clang 14.0.6 ]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.3 16 Sep 2025)',
+ 'cryptography': '46.0.1',
+ 'Platform': 'macOS-13.3.1-arm64-arm-64bit'}
+2025-09-17 14:15:03 [scrapy.addons] INFO: Enabled addons:
+[]
+2025-09-17 14:15:03 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-09-17 14:15:03 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'AUTOTHROTTLE_MAX_DELAY': 10,
+ 'AUTOTHROTTLE_START_DELAY': 1,
+ 'AUTOTHROTTLE_TARGET_CONCURRENCY': 0.3,
+ 'BOT_NAME': 'luxury_scraper',
+ 'CLOSESPIDER_PAGECOUNT': 2,
+ 'CONCURRENT_REQUESTS': 1,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 3,
+ 'LOG_FILE': PosixPath('/Users/segevarbiv/Projects/markondo data listings/data/scraper.log'),
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TELNETCONSOLE_ENABLED': False,
+ 'USER_AGENT': 'LuxuryScraper/1.0 (+https://example.com/bot)'}
+2025-09-17 14:15:03 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scraper.middlewares.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-09-17 14:15:03 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-09-17 14:15:03 [scrapy.middleware] INFO: Enabled item pipelines:
+['scraper.pipelines.clean_normalize.CleanNormalizePipeline',
+ 'scraper.pipelines.dedupe.DedupePipeline',
+ 'scraper.pipelines.database.DatabasePipeline']
+2025-09-17 14:15:03 [scrapy.core.engine] INFO: Spider opened
+2025-09-17 14:15:03 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-09-17 14:15:06 [scrapy.core.engine] INFO: Closing spider (closespider_pagecount)
+2025-09-17 14:15:07 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.propertyguru.com.sg/new-project-launch>: HTTP status code is not handled or not allowed
+2025-09-17 14:15:07 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 630,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 16138,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/403': 2,
+ 'elapsed_time_seconds': 3.024111,
+ 'finish_reason': 'closespider_pagecount',
+ 'finish_time': datetime.datetime(2025, 9, 17, 18, 15, 7, 5530, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 18158,
+ 'httpcompression/response_count': 2,
+ 'httperror/response_ignored_count': 1,
+ 'httperror/response_ignored_status_count/403': 1,
+ 'items_per_minute': 0.0,
+ 'log_count/INFO': 9,
+ 'memusage/max': 146309120,
+ 'memusage/startup': 146309120,
+ 'response_received_count': 2,
+ 'responses_per_minute': 40.0,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/403': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2025, 9, 17, 18, 15, 3, 981419, tzinfo=datetime.timezone.utc)}
+2025-09-17 14:15:07 [scrapy.core.engine] INFO: Spider closed (closespider_pagecount)
+2025-09-17 14:15:10 [scrapy.utils.log] INFO: Scrapy 2.13.3 started (bot: luxury_scraper)
+2025-09-17 14:15:10 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.1',
+ 'libxml2': '2.14.5',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.13 (main, Jun  5 2025, 08:21:08) [Clang 14.0.6 ]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.3 16 Sep 2025)',
+ 'cryptography': '46.0.1',
+ 'Platform': 'macOS-13.3.1-arm64-arm-64bit'}
+2025-09-17 14:15:10 [scrapy.addons] INFO: Enabled addons:
+[]
+2025-09-17 14:15:10 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-09-17 14:15:10 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'AUTOTHROTTLE_MAX_DELAY': 10,
+ 'AUTOTHROTTLE_START_DELAY': 1,
+ 'AUTOTHROTTLE_TARGET_CONCURRENCY': 0.5,
+ 'BOT_NAME': 'luxury_scraper',
+ 'CLOSESPIDER_PAGECOUNT': 1,
+ 'CONCURRENT_REQUESTS': 1,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 2,
+ 'LOG_FILE': PosixPath('/Users/segevarbiv/Projects/markondo data listings/data/scraper.log'),
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'RANDOMIZE_DOWNLOAD_DELAY': 0.5,
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TELNETCONSOLE_ENABLED': False,
+ 'USER_AGENT': 'LuxuryScraper/1.0 (+https://example.com/bot)'}
+2025-09-17 14:15:10 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scraper.middlewares.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-09-17 14:15:10 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-09-17 14:15:11 [scrapy.middleware] INFO: Enabled item pipelines:
+['scraper.pipelines.clean_normalize.CleanNormalizePipeline',
+ 'scraper.pipelines.dedupe.DedupePipeline',
+ 'scraper.pipelines.database.DatabasePipeline']
+2025-09-17 14:15:11 [scrapy.core.engine] INFO: Spider opened
+2025-09-17 14:15:11 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-09-17 14:15:11 [scrapy.core.engine] INFO: Closing spider (closespider_pagecount)
+2025-09-17 14:15:13 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://piersixtysixresidences.com/>: HTTP status code is not handled or not allowed
+2025-09-17 14:15:13 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 577,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 16095,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/403': 2,
+ 'elapsed_time_seconds': 2.157577,
+ 'finish_reason': 'closespider_pagecount',
+ 'finish_time': datetime.datetime(2025, 9, 17, 18, 15, 13, 460657, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 18025,
+ 'httpcompression/response_count': 2,
+ 'httperror/response_ignored_count': 1,
+ 'httperror/response_ignored_status_count/403': 1,
+ 'items_per_minute': 0.0,
+ 'log_count/INFO': 9,
+ 'memusage/max': 144457728,
+ 'memusage/startup': 144457728,
+ 'response_received_count': 2,
+ 'responses_per_minute': 60.0,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/403': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2025, 9, 17, 18, 15, 11, 303080, tzinfo=datetime.timezone.utc)}
+2025-09-17 14:15:13 [scrapy.core.engine] INFO: Spider closed (closespider_pagecount)
+2025-09-17 14:43:39 [scrapy.utils.log] INFO: Scrapy 2.13.3 started (bot: luxury_scraper)
+2025-09-17 14:43:39 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.1',
+ 'libxml2': '2.14.5',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.13 (main, Jun  5 2025, 08:21:08) [Clang 14.0.6 ]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.3 16 Sep 2025)',
+ 'cryptography': '46.0.1',
+ 'Platform': 'macOS-13.3.1-arm64-arm-64bit'}
+2025-09-17 14:43:39 [scrapy.addons] INFO: Enabled addons:
+[]
+2025-09-17 14:43:39 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-09-17 14:43:39 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'AUTOTHROTTLE_MAX_DELAY': 10,
+ 'AUTOTHROTTLE_START_DELAY': 1,
+ 'AUTOTHROTTLE_TARGET_CONCURRENCY': 0.5,
+ 'BOT_NAME': 'luxury_scraper',
+ 'CLOSESPIDER_PAGECOUNT': 5,
+ 'CONCURRENT_REQUESTS': 1,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 2,
+ 'LOG_FILE': PosixPath('/Users/segevarbiv/Projects/markondo data listings/data/scraper.log'),
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'RANDOMIZE_DOWNLOAD_DELAY': 0.5,
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TELNETCONSOLE_ENABLED': False,
+ 'USER_AGENT': 'LuxuryScraper/1.0 (+https://example.com/bot)'}
+2025-09-17 14:43:40 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scraper.middlewares.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-09-17 14:43:40 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-09-17 14:43:40 [scrapy.middleware] INFO: Enabled item pipelines:
+['scraper.pipelines.clean_normalize.CleanNormalizePipeline',
+ 'scraper.pipelines.dedupe.DedupePipeline',
+ 'scraper.pipelines.database.DatabasePipeline']
+2025-09-17 14:43:40 [scrapy.core.engine] INFO: Spider opened
+2025-09-17 14:43:40 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-09-17 14:43:42 [scrapy.core.engine] INFO: Closing spider (finished)
+2025-09-17 14:43:42 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 592,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 75730,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 2,
+ 'elapsed_time_seconds': 2.377566,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2025, 9, 17, 18, 43, 42, 835046, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 273641,
+ 'httpcompression/response_count': 2,
+ 'item_scraped_count': 1,
+ 'items_per_minute': 30.0,
+ 'log_count/INFO': 8,
+ 'memusage/max': 146669568,
+ 'memusage/startup': 146669568,
+ 'response_received_count': 2,
+ 'responses_per_minute': 60.0,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2025, 9, 17, 18, 43, 40, 457480, tzinfo=datetime.timezone.utc)}
+2025-09-17 14:43:42 [scrapy.core.engine] INFO: Spider closed (finished)
+2025-09-17 14:43:46 [scrapy.utils.log] INFO: Scrapy 2.13.3 started (bot: luxury_scraper)
+2025-09-17 14:43:46 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.1',
+ 'libxml2': '2.14.5',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.13 (main, Jun  5 2025, 08:21:08) [Clang 14.0.6 ]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.3 16 Sep 2025)',
+ 'cryptography': '46.0.1',
+ 'Platform': 'macOS-13.3.1-arm64-arm-64bit'}
+2025-09-17 14:43:46 [scrapy.addons] INFO: Enabled addons:
+[]
+2025-09-17 14:43:46 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-09-17 14:43:46 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'AUTOTHROTTLE_MAX_DELAY': 10,
+ 'AUTOTHROTTLE_START_DELAY': 1,
+ 'AUTOTHROTTLE_TARGET_CONCURRENCY': 0.5,
+ 'BOT_NAME': 'luxury_scraper',
+ 'CLOSESPIDER_PAGECOUNT': 5,
+ 'CONCURRENT_REQUESTS': 1,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 2,
+ 'LOG_FILE': PosixPath('/Users/segevarbiv/Projects/markondo data listings/data/scraper.log'),
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'RANDOMIZE_DOWNLOAD_DELAY': 0.5,
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TELNETCONSOLE_ENABLED': False,
+ 'USER_AGENT': 'LuxuryScraper/1.0 (+https://example.com/bot)'}
+2025-09-17 14:43:46 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scraper.middlewares.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-09-17 14:43:46 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-09-17 14:43:47 [scrapy.middleware] INFO: Enabled item pipelines:
+['scraper.pipelines.clean_normalize.CleanNormalizePipeline',
+ 'scraper.pipelines.dedupe.DedupePipeline',
+ 'scraper.pipelines.database.DatabasePipeline']
+2025-09-17 14:43:47 [scrapy.core.engine] INFO: Spider opened
+2025-09-17 14:43:47 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-09-17 14:43:49 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://piersixtysixresidences.com/>: HTTP status code is not handled or not allowed
+2025-09-17 14:43:49 [scrapy.core.engine] INFO: Closing spider (finished)
+2025-09-17 14:43:49 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 540,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 16018,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/403': 2,
+ 'elapsed_time_seconds': 2.158624,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2025, 9, 17, 18, 43, 49, 195683, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 17918,
+ 'httpcompression/response_count': 2,
+ 'httperror/response_ignored_count': 1,
+ 'httperror/response_ignored_status_count/403': 1,
+ 'items_per_minute': 0.0,
+ 'log_count/INFO': 9,
+ 'memusage/max': 146391040,
+ 'memusage/startup': 146391040,
+ 'response_received_count': 2,
+ 'responses_per_minute': 60.0,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/403': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2025, 9, 17, 18, 43, 47, 37059, tzinfo=datetime.timezone.utc)}
+2025-09-17 14:43:49 [scrapy.core.engine] INFO: Spider closed (finished)
+2025-09-17 14:43:52 [scrapy.utils.log] INFO: Scrapy 2.13.3 started (bot: luxury_scraper)
+2025-09-17 14:43:52 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.1',
+ 'libxml2': '2.14.5',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.13 (main, Jun  5 2025, 08:21:08) [Clang 14.0.6 ]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.3 16 Sep 2025)',
+ 'cryptography': '46.0.1',
+ 'Platform': 'macOS-13.3.1-arm64-arm-64bit'}
+2025-09-17 14:43:52 [scrapy.addons] INFO: Enabled addons:
+[]
+2025-09-17 14:43:52 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-09-17 14:43:52 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'AUTOTHROTTLE_MAX_DELAY': 10,
+ 'AUTOTHROTTLE_START_DELAY': 1,
+ 'AUTOTHROTTLE_TARGET_CONCURRENCY': 0.5,
+ 'BOT_NAME': 'luxury_scraper',
+ 'CLOSESPIDER_PAGECOUNT': 5,
+ 'CONCURRENT_REQUESTS': 1,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 2,
+ 'LOG_FILE': PosixPath('/Users/segevarbiv/Projects/markondo data listings/data/scraper.log'),
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'RANDOMIZE_DOWNLOAD_DELAY': 0.5,
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TELNETCONSOLE_ENABLED': False,
+ 'USER_AGENT': 'LuxuryScraper/1.0 (+https://example.com/bot)'}
+2025-09-17 14:43:52 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scraper.middlewares.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-09-17 14:43:52 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-09-17 14:43:52 [scrapy.middleware] INFO: Enabled item pipelines:
+['scraper.pipelines.clean_normalize.CleanNormalizePipeline',
+ 'scraper.pipelines.dedupe.DedupePipeline',
+ 'scraper.pipelines.database.DatabasePipeline']
+2025-09-17 14:43:52 [scrapy.core.engine] INFO: Spider opened
+2025-09-17 14:43:52 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-09-17 14:43:57 [scrapy.core.scraper] WARNING: Dropped: Database storage failed: 'value' is an invalid keyword argument for Unit
+{'project': {'name': 'Oval Village', 'developer_name': 'Berkeley Group', 'description': 'Discover modern living in Oval Village. Explore new apartments in this vibrant London community.', 'address': 'Oval, Se11 5qy', 'city': 'London', 'country': 'United Kingdom', 'status': None, 'est_completion': None, 'website_url': 'https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/oval-village---the-halo-brochure_06062025.ashx?rev=46c346ea2c5344ad9d98b3c466218be3&hash=CAB37BCB5383BCD2688E58581EF7C825', 'property_type': 'Residential', 'price_info': '£595,000 - £2,352,000', 'inquiry_url': '/api/sitecore/DevelopmentsSearchPage/DevelopmentsList', 'completeness_score': 0.7, 'contact_email': 'ovalvillagemarketingsuite@berkeleygroup.co.uk'}, 'units': [{'unit_name': 'Various', 'price_note': None, 'value': 595000.0, 'currency': 'GBP', 'note': None, 'project_id': 2}], 'amenities': ['Hendon', 'Canary Wharf', 'High Wycombe', 'Bath', 'Watford', 'Birmingham', 'Brownfield Regeneration', 'Fitness', 'Greenwich', 'Milton Keynes', 'Pool', 'West Ham', 'Bermondsey', 'Bar', 'Fulham', 'Wandsworth', 'Iconic Architecture', 'Terrace', 'Lounge', 'Battersea'], 'media_links': [{'type': 'vr', 'url': 'https://<a href="https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/oval-village---the-halo-factsheet_29082025.ashx?rev=9ad11039675a4896bf59f75fd468e3dc&amp;hash=59DE107BF498BB32572FE89B285B7A33" rel="noopener noreferrer" title="View The Halo factsheet (opens in new window)" class="download-item" target="_blank"> <img src="https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/oval-village-the-halo-factsheet-thumbnail_29082025.ashx?h=246&amp;w=166&amp;rev=944c6cab947a45ea85a62274abe9942e&amp;hash=6156D14A6C6A677F10EF3A8547758507" alt="The Halo Factsheet" width="166" height="246"> </a>', 'caption': 'Virtual Tour (3d)'}, {'type': 'vr', 'url': 'https://<a href="https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/oval-village---the-halo-factsheet_29082025.ashx?rev=9ad11039675a4896bf59f75fd468e3dc&amp;hash=59DE107BF498BB32572FE89B285B7A33" rel="noopener noreferrer" title="View The Halo factsheet (opens in new window)" class="download" target="_blank"> <img src="https://www.berkeleygroup.co.uk/-/media/global-logos-and-icons/icons/download.ashx?h=20&amp;w=20&amp;rev=b3b7f3ebe021478c88efd20c20f8ce8d&amp;hash=0E1A8DA1D2765D55E28441421DB5A6D8" class="icon-download" alt="Download Icon" width="20" height="20"> </a>', 'caption': 'Virtual Tour (3d)'}, {'type': 'vr', 'url': 'https://<a href="https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/oval-village_the-regeneration-of-oval_24-04-2025.ashx?rev=0ee61cd241fb4642bbea92783dfa1d4d&amp;hash=86A69D5D4BC7610144A62D39C8D58CF1" rel="noopener noreferrer" title="View The Regeneration at Oval brochure (opens in new window)" class="download-item" target="_blank"> <img src="https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/oval-village_the-regeneration-of-oval_thumbnail_24-04-2025.ashx?h=246&amp;w=166&amp;rev=877af342fc304ec990729e0193f9d85e&amp;hash=E88D1814A02C1A563DC0B15B9F966B8A" alt="A thumbnail of The Regeneration of Oval brochure" width="166" height="246"> </a>', 'caption': 'Virtual Tour (3d)'}, {'type': 'vr', 'url': 'https://<a href="https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/oval-village_the-regeneration-of-oval_24-04-2025.ashx?rev=0ee61cd241fb4642bbea92783dfa1d4d&amp;hash=86A69D5D4BC7610144A62D39C8D58CF1" rel="noopener noreferrer" title="View The Regeneration at Oval brochure (opens in new window)" class="download" target="_blank"> <img src="https://www.berkeleygroup.co.uk/-/media/system/page-event-images/download.ashx?h=20&amp;w=20&amp;rev=d2ec2a4f1a5249e88c6259e88e224cb8&amp;hash=7E26FB46334312B0B6E06F2A8F2D8F95" class="icon-download" alt="Download" width="20" height="20"> </a>', 'caption': 'Virtual Tour (3d)'}, {'type': 'vr', 'url': 'https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/oval-village_education-guide_24-07-2025.ashx?rev=4b8c8578911e4e2f80cd5e2ec2827ef6&hash=B2FCA23D8208E7A1CD5095E5F7103353', 'caption': 'Virtual Tour (3d)'}, {'type': 'vr', 'url': 'https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/oval-village_education-guide_24-07-2025.ashx?rev=4b8c8578911e4e2f80cd5e2ec2827ef6&hash=B2FCA23D8208E7A1CD5095E5F7103353', 'caption': 'Virtual Tour (3d)'}, {'type': 'vr', 'url': 'https://<a href="https://www.google.com/maps/place/283+Kennington+Ln,+London+SE11+5QY/@51.486752,-0.1175181,18z/data=!3m1!4b1!4m6!3m5!1s0x487604933b585c97:0x346bf34f9acc5a7c!8m2!3d51.486752!4d-0.1162306!16s%2Fg%2F11x7z5kyft?entry=ttu&amp;g_ep=EgoyMDI1MDUyNi4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D" target="_blank" class="link--default" rel="nofollow noopener noreferrer" title="View in Google Maps (opens in a new window)">SE11 5QY</a>', 'caption': 'Virtual Tour (3d)'}, {'type': 'vr', 'url': 'https://www.google.com/maps/place/283+Kennington+Ln,+London+SE11+5QY/@51.486752,-0.1175181,18z/data=!3m1!4b1!4m6!3m5!1s0x487604933b585c97:0x346bf34f9acc5a7c!8m2!3d51.486752!4d-0.1162306!16s%2Fg%2F11x7z5kyft?entry=ttu&g_ep=EgoyMDI1MDUyNi4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D', 'caption': 'Virtual Tour (3d)'}, {'type': 'vr', 'url': 'https://<a href="https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/oval-village---development-factsheet_29082025.ashx?rev=beaf61821ba54531bd423360ad49d650&amp;hash=F13E07938130B34CDE6280728F8EEDE2" rel="noopener noreferrer" title="Download Oval Village - Factsheet (opens new window)" class="download-item" target="_blank"> <img src="https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/oval-village_the-halo_factsheet-thumb_25072025.ashx?h=246&amp;w=166&amp;rev=23cac9b295b24d37834ec253ca5d4834&amp;hash=9B78BE7E785A11DB76E1384844F11101" alt="Oval Village - Factsheet - Thumbnail" width="166" height="246"> </a>', 'caption': 'Virtual Tour (360)'}, {'type': 'vr', 'url': 'https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/oval-village---development-factsheet_29082025.ashx?rev=beaf61821ba54531bd423360ad49d650&hash=F13E07938130B34CDE6280728F8EEDE2', 'caption': 'Virtual Tour (360)'}, {'type': 'vr', 'url': 'https://<a href="https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/oval-village---development-factsheet_29082025.ashx?rev=beaf61821ba54531bd423360ad49d650&amp;hash=F13E07938130B34CDE6280728F8EEDE2" rel="noopener noreferrer" title="Download Oval Village - Factsheet (opens new window)" class="download" target="_blank"> <img src="https://www.berkeleygroup.co.uk/-/media/system/page-event-images/download.ashx?h=20&amp;w=20&amp;rev=d2ec2a4f1a5249e88c6259e88e224cb8&amp;hash=7E26FB46334312B0B6E06F2A8F2D8F95" class="icon-download" alt="Download" width="20" height="20"> </a>', 'caption': 'Virtual Tour (360)'}, {'type': 'vr', 'url': 'https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/oval-village---development-factsheet_29082025.ashx?rev=beaf61821ba54531bd423360ad49d650&hash=F13E07938130B34CDE6280728F8EEDE2', 'caption': 'Virtual Tour (360)'}, {'type': 'video', 'url': 'https://vimeo.com/1096261289/0f892e76bc?share=copy', 'caption': 'Project Video'}, {'type': 'video', 'url': 'https://<a href="https://www.youtube.com/user/berkeleygroup" rel="noopener noreferrer" title="Follow us on YouTube" target="_blank"> <img src="https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/generic-items/footer-logos/youtube.ashx?rev=466b6357d1674c7fbd3ee538055a5ad4&amp;hash=6FB44D2FF8E4DF8999C53904B12F6726" class="img--responsive img--greyscale" alt="YouTube"> <img src="https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/generic-items/footer-logos/youtube-color.ashx?rev=389ee749695c496dbfd9d8a68e346019&amp;hash=8A87DB037FD5276733CE2E69ECEA7FBB" class="img-responsive img--colored" alt="YouTube"> </a>', 'caption': 'Project Video'}, {'type': 'brochure', 'url': 'https://<a href="https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/oval-village---the-halo-brochure_06062025.ashx?rev=46c346ea2c5344ad9d98b3c466218be3&amp;hash=CAB37BCB5383BCD2688E58581EF7C825" rel="noopener noreferrer" title="View The Halo Brochure (Opens a New Window)" class="download-item" target="_blank"> <img src="https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/oval-village-the-halo-brochure-thumbnail_06062025.ashx?h=246&amp;w=166&amp;rev=0518279102944d2f8ad0da86aba69157&amp;hash=30C4D932537269D8ACA9049F416C5D8E" alt="Oval Village - The Halo Brochure Thumbnail" width="166" height="246"> </a>', 'caption': 'Project Brochure'}, {'type': 'brochure', 'url': 'https://<a href="https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/oval-village---the-halo-brochure_06062025.ashx?rev=46c346ea2c5344ad9d98b3c466218be3&amp;hash=CAB37BCB5383BCD2688E58581EF7C825" rel="noopener noreferrer" title="View The Halo Brochure (Opens a New Window)" class="download" target="_blank"> <img src="https://www.berkeleygroup.co.uk/-/media/system/page-event-images/download.ashx?h=20&amp;w=20&amp;rev=d2ec2a4f1a5249e88c6259e88e224cb8&amp;hash=7E26FB46334312B0B6E06F2A8F2D8F95" class="icon-download" alt="Download" width="20" height="20"> </a>', 'caption': 'Project Brochure'}, {'type': 'brochure', 'url': 'https://<a href="https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/oval-village---the-halo-factsheet_29082025.ashx?rev=9ad11039675a4896bf59f75fd468e3dc&amp;hash=59DE107BF498BB32572FE89B285B7A33" rel="noopener noreferrer" title="View The Halo factsheet (opens in new window)" class="download-item" target="_blank"> <img src="https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/oval-village-the-halo-factsheet-thumbnail_29082025.ashx?h=246&amp;w=166&amp;rev=944c6cab947a45ea85a62274abe9942e&amp;hash=6156D14A6C6A677F10EF3A8547758507" alt="The Halo Factsheet" width="166" height="246"> </a>', 'caption': 'Project Brochure'}, {'type': 'brochure', 'url': 'https://<a href="https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/oval-village---the-halo-factsheet_29082025.ashx?rev=9ad11039675a4896bf59f75fd468e3dc&amp;hash=59DE107BF498BB32572FE89B285B7A33" rel="noopener noreferrer" title="View The Halo factsheet (opens in new window)" class="download" target="_blank"> <img src="https://www.berkeleygroup.co.uk/-/media/global-logos-and-icons/icons/download.ashx?h=20&amp;w=20&amp;rev=b3b7f3ebe021478c88efd20c20f8ce8d&amp;hash=0E1A8DA1D2765D55E28441421DB5A6D8" class="icon-download" alt="Download Icon" width="20" height="20"> </a>', 'caption': 'Project Brochure'}, {'type': 'brochure', 'url': 'https://<a href="https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/the-pinnacle-brochure_lr_23082023.ashx?rev=366111ee00024f28bc823c4922784db0&amp;hash=E0391BAF8EA0D20205507DD56BC36E97" rel="noopener noreferrer" title="View The Pinnacle Brochure" class="download-item" target="_blank"> <img src="https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/the-pinnacle/oval-village_the-pinnacle_brochure-thumbnail_05042022.ashx?h=246&amp;w=166&amp;rev=26a64cf06dff4e9fadf23d77fc272017&amp;hash=2512F7DF23B4EB3FE209D3C428038B05" alt="Oval Village - The Pinnacle Brochure" width="166" height="246"> </a>', 'caption': 'Project Brochure'}, {'type': 'brochure', 'url': 'https://<a href="https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/the-pinnacle-brochure_lr_23082023.ashx?rev=366111ee00024f28bc823c4922784db0&amp;hash=E0391BAF8EA0D20205507DD56BC36E97" rel="noopener noreferrer" title="View The Pinnacle Brochure" class="download" target="_blank"> <img src="https://www.berkeleygroup.co.uk/-/media/system/page-event-images/download.ashx?h=20&amp;w=20&amp;rev=d2ec2a4f1a5249e88c6259e88e224cb8&amp;hash=7E26FB46334312B0B6E06F2A8F2D8F95" class="icon-download" alt="Download" width="20" height="20"> </a>', 'caption': 'Project Brochure'}, {'type': 'brochure', 'url': 'https://<a href="https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/oval-village---development-factsheet_29082025.ashx?rev=beaf61821ba54531bd423360ad49d650&amp;hash=F13E07938130B34CDE6280728F8EEDE2" rel="noopener noreferrer" title="Download Oval Village - Factsheet (opens new window)" class="download-item" target="_blank"> <img src="https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/oval-village_the-halo_factsheet-thumb_25072025.ashx?h=246&amp;w=166&amp;rev=23cac9b295b24d37834ec253ca5d4834&amp;hash=9B78BE7E785A11DB76E1384844F11101" alt="Oval Village - Factsheet - Thumbnail" width="166" height="246"> </a>', 'caption': 'Project Brochure'}, {'type': 'brochure', 'url': 'https://<a href="https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/oval-village---development-factsheet_29082025.ashx?rev=beaf61821ba54531bd423360ad49d650&amp;hash=F13E07938130B34CDE6280728F8EEDE2" rel="noopener noreferrer" title="Download Oval Village - Factsheet (opens new window)" class="download" target="_blank"> <img src="https://www.berkeleygroup.co.uk/-/media/system/page-event-images/download.ashx?h=20&amp;w=20&amp;rev=d2ec2a4f1a5249e88c6259e88e224cb8&amp;hash=7E26FB46334312B0B6E06F2A8F2D8F95" class="icon-download" alt="Download" width="20" height="20"> </a>', 'caption': 'Project Brochure'}, {'type': 'brochure', 'url': 'https://<a href="https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/oval-village_the-regeneration-of-oval_24-04-2025.ashx?rev=0ee61cd241fb4642bbea92783dfa1d4d&amp;hash=86A69D5D4BC7610144A62D39C8D58CF1" rel="noopener noreferrer" title="View The Regeneration at Oval brochure (opens in new window)" class="download-item" target="_blank"> <img src="https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/oval-village_the-regeneration-of-oval_thumbnail_24-04-2025.ashx?h=246&amp;w=166&amp;rev=877af342fc304ec990729e0193f9d85e&amp;hash=E88D1814A02C1A563DC0B15B9F966B8A" alt="A thumbnail of The Regeneration of Oval brochure" width="166" height="246"> </a>', 'caption': 'Project Brochure'}, {'type': 'brochure', 'url': 'https://<a href="https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/oval-village_the-regeneration-of-oval_24-04-2025.ashx?rev=0ee61cd241fb4642bbea92783dfa1d4d&amp;hash=86A69D5D4BC7610144A62D39C8D58CF1" rel="noopener noreferrer" title="View The Regeneration at Oval brochure (opens in new window)" class="download" target="_blank"> <img src="https://www.berkeleygroup.co.uk/-/media/system/page-event-images/download.ashx?h=20&amp;w=20&amp;rev=d2ec2a4f1a5249e88c6259e88e224cb8&amp;hash=7E26FB46334312B0B6E06F2A8F2D8F95" class="icon-download" alt="Download" width="20" height="20"> </a>', 'caption': 'Project Brochure'}, {'type': 'brochure', 'url': 'https://<a href="https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/oval-village_education-guide_24-07-2025.ashx?rev=4b8c8578911e4e2f80cd5e2ec2827ef6&amp;hash=B2FCA23D8208E7A1CD5095E5F7103353" rel="noopener noreferrer" title="Download the Education Guide (opens in a new window)" class="download-item" target="_blank"> <img src="https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/oval-village_education-guide_thumbnail_24-07-2025.ashx?h=246&amp;w=166&amp;rev=134e0e87a1b749f3850d114a503bc5b6&amp;hash=F763B15E57D977ACCB0A71347F2645B9" alt="A thumbnail image of the front of the Education Guide" width="166" height="246"> </a>', 'caption': 'Project Brochure'}, {'type': 'brochure', 'url': 'https://<a href="https://www.berkeleygroup.co.uk/-/media/migration/berkeley-group/developments/oval-village/brochures/oval-village_education-guide_24-07-2025.ashx?rev=4b8c8578911e4e2f80cd5e2ec2827ef6&amp;hash=B2FCA23D8208E7A1CD5095E5F7103353" rel="noopener noreferrer" title="Download the Education Guide (opens in a new window)" class="download" target="_blank"> <img src="https://www.berkeleygroup.co.uk/-/media/global-logos-and-icons/icons/download.ashx?h=20&amp;w=20&amp;rev=b3b7f3ebe021478c88efd20c20f8ce8d&amp;hash=0E1A8DA1D2765D55E28441421DB5A6D8" class="icon-download" alt="Download Icon" width="20" height="20"> </a>', 'caption': 'Project Brochure'}], 'source': {'source_name': 'berkeley_oval_village', 'source_url': 'https://www.berkeleygroup.co.uk/developments/london/oval/oval-village', 'robots_ok': True, 'tos_ok': True}, '_is_update': False}
+2025-09-17 14:43:57 [scrapy.core.engine] INFO: Closing spider (finished)
+2025-09-17 14:43:57 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 649,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 253752,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 2,
+ 'elapsed_time_seconds': 4.694219,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2025, 9, 17, 18, 43, 57, 573437, tzinfo=datetime.timezone.utc),
+ 'item_dropped_count': 1,
+ 'item_dropped_reasons_count/DropItem': 1,
+ 'items_per_minute': 0.0,
+ 'log_count/INFO': 8,
+ 'log_count/WARNING': 1,
+ 'memusage/max': 145408000,
+ 'memusage/startup': 145408000,
+ 'response_received_count': 2,
+ 'responses_per_minute': 30.0,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2025, 9, 17, 18, 43, 52, 879218, tzinfo=datetime.timezone.utc)}
+2025-09-17 14:43:57 [scrapy.core.engine] INFO: Spider closed (finished)
+2025-09-17 14:44:04 [scrapy.utils.log] INFO: Scrapy 2.13.3 started (bot: luxury_scraper)
+2025-09-17 14:44:04 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.1',
+ 'libxml2': '2.14.5',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.13 (main, Jun  5 2025, 08:21:08) [Clang 14.0.6 ]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.3 16 Sep 2025)',
+ 'cryptography': '46.0.1',
+ 'Platform': 'macOS-13.3.1-arm64-arm-64bit'}
+2025-09-17 14:44:04 [scrapy.addons] INFO: Enabled addons:
+[]
+2025-09-17 14:44:04 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-09-17 14:44:04 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'AUTOTHROTTLE_MAX_DELAY': 10,
+ 'AUTOTHROTTLE_START_DELAY': 1,
+ 'AUTOTHROTTLE_TARGET_CONCURRENCY': 0.3,
+ 'BOT_NAME': 'luxury_scraper',
+ 'CLOSESPIDER_PAGECOUNT': 10,
+ 'CONCURRENT_REQUESTS': 1,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 3,
+ 'LOG_FILE': PosixPath('/Users/segevarbiv/Projects/markondo data listings/data/scraper.log'),
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TELNETCONSOLE_ENABLED': False,
+ 'USER_AGENT': 'LuxuryScraper/1.0 (+https://example.com/bot)'}
+2025-09-17 14:44:04 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scraper.middlewares.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-09-17 14:44:04 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-09-17 14:44:04 [scrapy.middleware] INFO: Enabled item pipelines:
+['scraper.pipelines.clean_normalize.CleanNormalizePipeline',
+ 'scraper.pipelines.dedupe.DedupePipeline',
+ 'scraper.pipelines.database.DatabasePipeline']
+2025-09-17 14:44:04 [scrapy.core.engine] INFO: Spider opened
+2025-09-17 14:44:04 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-09-17 14:44:07 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.propertyguru.com.sg/new-project-launch>: HTTP status code is not handled or not allowed
+2025-09-17 14:44:07 [scrapy.core.engine] INFO: Closing spider (finished)
+2025-09-17 14:44:07 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 626,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 16133,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/403': 2,
+ 'elapsed_time_seconds': 2.728986,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2025, 9, 17, 18, 44, 7, 465622, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 18158,
+ 'httpcompression/response_count': 2,
+ 'httperror/response_ignored_count': 1,
+ 'httperror/response_ignored_status_count/403': 1,
+ 'items_per_minute': 0.0,
+ 'log_count/INFO': 9,
+ 'memusage/max': 146079744,
+ 'memusage/startup': 146079744,
+ 'response_received_count': 2,
+ 'responses_per_minute': 60.0,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/403': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2025, 9, 17, 18, 44, 4, 736636, tzinfo=datetime.timezone.utc)}
+2025-09-17 14:44:07 [scrapy.core.engine] INFO: Spider closed (finished)
+2025-09-17 14:44:10 [scrapy.utils.log] INFO: Scrapy 2.13.3 started (bot: luxury_scraper)
+2025-09-17 14:44:10 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.1',
+ 'libxml2': '2.14.5',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.13 (main, Jun  5 2025, 08:21:08) [Clang 14.0.6 ]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.3 16 Sep 2025)',
+ 'cryptography': '46.0.1',
+ 'Platform': 'macOS-13.3.1-arm64-arm-64bit'}
+2025-09-17 14:44:10 [scrapy.addons] INFO: Enabled addons:
+[]
+2025-09-17 14:44:10 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-09-17 14:44:10 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'AUTOTHROTTLE_MAX_DELAY': 10,
+ 'AUTOTHROTTLE_START_DELAY': 1,
+ 'AUTOTHROTTLE_TARGET_CONCURRENCY': 0.3,
+ 'BOT_NAME': 'luxury_scraper',
+ 'CLOSESPIDER_PAGECOUNT': 10,
+ 'CONCURRENT_REQUESTS': 1,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 3,
+ 'LOG_FILE': PosixPath('/Users/segevarbiv/Projects/markondo data listings/data/scraper.log'),
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TELNETCONSOLE_ENABLED': False,
+ 'USER_AGENT': 'LuxuryScraper/1.0 (+https://example.com/bot)'}
+2025-09-17 14:44:10 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scraper.middlewares.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-09-17 14:44:10 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-09-17 14:44:10 [scrapy.middleware] INFO: Enabled item pipelines:
+['scraper.pipelines.clean_normalize.CleanNormalizePipeline',
+ 'scraper.pipelines.dedupe.DedupePipeline',
+ 'scraper.pipelines.database.DatabasePipeline']
+2025-09-17 14:44:10 [scrapy.core.engine] INFO: Spider opened
+2025-09-17 14:44:10 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-09-17 14:44:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://www.offplanproperties.ae/projects/>: HTTP status code is not handled or not allowed
+2025-09-17 14:44:22 [scrapy.core.engine] INFO: Closing spider (finished)
+2025-09-17 14:44:22 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1483,
+ 'downloader/request_count': 5,
+ 'downloader/request_method_count/GET': 5,
+ 'downloader/response_bytes': 19104,
+ 'downloader/response_count': 5,
+ 'downloader/response_status_count/200': 2,
+ 'downloader/response_status_count/301': 2,
+ 'downloader/response_status_count/404': 1,
+ 'elapsed_time_seconds': 11.998969,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2025, 9, 17, 18, 44, 22, 902268, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 109073,
+ 'httpcompression/response_count': 3,
+ 'httperror/response_ignored_count': 1,
+ 'httperror/response_ignored_status_count/404': 1,
+ 'items_per_minute': 0.0,
+ 'log_count/INFO': 9,
+ 'memusage/max': 145457152,
+ 'memusage/startup': 145457152,
+ 'response_received_count': 3,
+ 'responses_per_minute': 16.363636363636363,
+ 'robotstxt/request_count': 2,
+ 'robotstxt/response_count': 2,
+ 'robotstxt/response_status_count/200': 2,
+ 'scheduler/dequeued': 2,
+ 'scheduler/dequeued/memory': 2,
+ 'scheduler/enqueued': 2,
+ 'scheduler/enqueued/memory': 2,
+ 'start_time': datetime.datetime(2025, 9, 17, 18, 44, 10, 903299, tzinfo=datetime.timezone.utc)}
+2025-09-17 14:44:22 [scrapy.core.engine] INFO: Spider closed (finished)
+2025-09-17 14:44:26 [scrapy.utils.log] INFO: Scrapy 2.13.3 started (bot: luxury_scraper)
+2025-09-17 14:44:26 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.1',
+ 'libxml2': '2.14.5',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.13 (main, Jun  5 2025, 08:21:08) [Clang 14.0.6 ]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.3 16 Sep 2025)',
+ 'cryptography': '46.0.1',
+ 'Platform': 'macOS-13.3.1-arm64-arm-64bit'}
+2025-09-17 14:44:26 [scrapy.addons] INFO: Enabled addons:
+[]
+2025-09-17 14:44:26 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-09-17 14:44:26 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'AUTOTHROTTLE_MAX_DELAY': 10,
+ 'AUTOTHROTTLE_START_DELAY': 1,
+ 'AUTOTHROTTLE_TARGET_CONCURRENCY': 0.3,
+ 'BOT_NAME': 'luxury_scraper',
+ 'CLOSESPIDER_PAGECOUNT': 10,
+ 'CONCURRENT_REQUESTS': 1,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 3,
+ 'LOG_FILE': PosixPath('/Users/segevarbiv/Projects/markondo data listings/data/scraper.log'),
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TELNETCONSOLE_ENABLED': False,
+ 'USER_AGENT': 'LuxuryScraper/1.0 (+https://example.com/bot)'}
+2025-09-17 14:44:26 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scraper.middlewares.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-09-17 14:44:26 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-09-17 14:44:26 [scrapy.middleware] INFO: Enabled item pipelines:
+['scraper.pipelines.clean_normalize.CleanNormalizePipeline',
+ 'scraper.pipelines.dedupe.DedupePipeline',
+ 'scraper.pipelines.database.DatabasePipeline']
+2025-09-17 14:44:26 [scrapy.core.engine] INFO: Spider opened
+2025-09-17 14:44:26 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-09-17 14:44:29 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://www.corcoran.com/new-developments>: HTTP status code is not handled or not allowed
+2025-09-17 14:44:29 [scrapy.core.engine] INFO: Closing spider (finished)
+2025-09-17 14:44:29 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 632,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 41441,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 1,
+ 'downloader/response_status_count/404': 1,
+ 'elapsed_time_seconds': 3.003709,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2025, 9, 17, 18, 44, 29, 589199, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 87874,
+ 'httpcompression/response_count': 2,
+ 'httperror/response_ignored_count': 1,
+ 'httperror/response_ignored_status_count/404': 1,
+ 'items_per_minute': 0.0,
+ 'log_count/INFO': 9,
+ 'memusage/max': 145539072,
+ 'memusage/startup': 145539072,
+ 'response_received_count': 2,
+ 'responses_per_minute': 40.0,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2025, 9, 17, 18, 44, 26, 585490, tzinfo=datetime.timezone.utc)}
+2025-09-17 14:44:29 [scrapy.core.engine] INFO: Spider closed (finished)

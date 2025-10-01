@@ -1,0 +1,11 @@
+scrapy>=2.11.0
+playwright>=1.40.0
+pydantic>=2.5.0
+pandas>=2.1.0
+sqlalchemy>=2.0.0
+structlog>=23.2.0
+pyyaml>=6.0.1
+python-slugify>=8.0.1
+aiohttp>=3.9.0
+scrapy-robots>=0.1.0
+babel>=2.13.0

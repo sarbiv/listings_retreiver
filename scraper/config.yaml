@@ -1,0 +1,62 @@
+defaults:
+  download_delay_sec: 3.0
+  random_jitter_sec: 2.0
+  concurrent_requests: 2
+  max_pages_per_domain: 400
+  obey_robots: true
+  autothrottle: true
+  geocode_enabled: false
+
+sites:
+  selene_fortlauderdale:
+    start_urls: ["https://selenefortlauderdale.com/"]
+    max_projects: 50
+    download_delay_sec: 2.0
+    
+  pier_66:
+    start_urls: ["https://piersixtysixresidences.com/"]
+    max_projects: 50
+    download_delay_sec: 2.0
+    
+  berkeley_oval_village:
+    start_urls: ["https://www.berkeleygroup.co.uk/developments/london/oval/oval-village"]
+    max_projects: 50
+    download_delay_sec: 2.0
+    
+  propertyguru_sg:
+    start_urls: ["https://www.propertyguru.com.sg/new-project-launch"]
+    max_projects: 200
+    download_delay_sec: 3.0
+    
+  opr_dubai:
+    start_urls: ["https://offplanproperties.ae/projects/"]
+    max_projects: 300
+    download_delay_sec: 3.0
+    
+  corcoran_sunshine_nyc:
+    start_urls: ["https://www.corcoran.com/new-developments"]
+    max_projects: 150
+    download_delay_sec: 3.0
+
+# Currency mappings
+currency_symbols:
+  "$": "USD"
+  "£": "GBP"
+  "€": "EUR"
+  "₪": "ILS"
+  "AED": "AED"
+  "S$": "SGD"
+  "¥": "JPY"
+  "₹": "INR"
+
+# Status mappings
+status_mappings:
+  "pre-construction": "planned"
+  "pre construction": "planned"
+  "coming soon": "planned"
+  "under construction": "under_construction"
+  "construction": "under_construction"
+  "completed": "completed"
+  "finished": "completed"
+  "sold out": "completed"
+  "unknown": "unknown"
